@@ -4,7 +4,7 @@ const Vinyl = require('vinyl');
 const groupBy = require('@bit/bit.utils.object.group-by');
 const path = require('path');
 
-const compiledFileTypes = ['js', 'jsx', 'ts'];
+const compiledFileTypes = ['js', 'jsx', 'ts', 'tsx'];
 
 const _getDistFile = (file, distPath, content) => {
     let distFile = file.clone();
@@ -48,7 +48,7 @@ const baseCompile = (files, distPath, compilerPath, compiledFileTypes) => {
 
     const options = {
         sourceMaps: true,
-        presets: [require.resolve('next/babel')]
+        presets: [require.resolve("@babel/preset-typescript") ]
     };
 
     // Divide files by whether we should compile them, according to file type.

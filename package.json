@@ -1,6 +1,5 @@
 {
-  "name": "kencookco.envs",
-  "version": "1.0.0",
+  "name": "j718.envs",
   "description": "Compilers for use with Bit (https://bit.dev/kencookco/envs)",
   "main": "index.js",
   "scripts": {
@@ -21,6 +20,8 @@
   "homepage": "https://github.com/kencookco/envs#readme",
   "dependencies": {
     "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.12.16",
+    "@babel/preset-typescript": "^7.12.16",
     "@bit/bit.utils.object.group-by": "^1.0.0",
     "next": "~9.0.0",
     "vinyl": "^2.2.0"
@@ -38,6 +39,6 @@
       "compiler": "bit.envs/compilers/babel@7.0.1"
     },
     "componentsDefaultDirectory": "components/{name}",
-    "packageManager": "npm"
+    "packageManager": "yarn"
   }
 }
